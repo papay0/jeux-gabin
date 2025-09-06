@@ -307,17 +307,24 @@ export default function SimonGame() {
           </div>
         </Card>
 
-        {/* Fun decorations */}
+        {/* Fun decorations - just static emojis, not the answer! */}
         <div className="mt-8 text-center">
           <div className="text-4xl space-x-2">
-            {sequence.slice(-5).map((color, index) => {
-              const btn = colorButtons.find(b => b.color === color);
-              return (
-                <span key={index} className="inline-block animate-bounce" style={{ animationDelay: `${index * 0.1}s` }}>
-                  {btn?.emoji}
-                </span>
-              );
-            })}
+            <span className="inline-block animate-bounce" style={{ animationDelay: '0s' }}>
+              🎮
+            </span>
+            <span className="inline-block animate-bounce" style={{ animationDelay: '0.2s' }}>
+              🌟
+            </span>
+            <span className="inline-block animate-bounce" style={{ animationDelay: '0.4s' }}>
+              🏆
+            </span>
+            <span className="inline-block animate-bounce" style={{ animationDelay: '0.6s' }}>
+              🎯
+            </span>
+            <span className="inline-block animate-bounce" style={{ animationDelay: '0.8s' }}>
+              🎨
+            </span>
           </div>
         </div>
       </div>
