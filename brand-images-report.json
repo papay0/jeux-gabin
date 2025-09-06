@@ -1,0 +1,122 @@
+[
+  {
+    "brand": "Ferrari",
+    "status": "verified",
+    "imageUrl": "https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=800&h=600&fit=crop",
+    "fallbackUrl": "https://images.unsplash.com/photo-1592198084033-aade902d1aae?w=800&h=600&fit=crop"
+  },
+  {
+    "brand": "BMW",
+    "status": "verified",
+    "imageUrl": "https://images.unsplash.com/photo-1555215858-9dc80cd5b8df?w=800&h=600&fit=crop",
+    "fallbackUrl": "https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=800&h=600&fit=crop"
+  },
+  {
+    "brand": "Mercedes-Benz",
+    "status": "verified",
+    "imageUrl": "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=800&h=600&fit=crop",
+    "fallbackUrl": "https://images.unsplash.com/photo-1553440569-bcc63803a83d?w=800&h=600&fit=crop"
+  },
+  {
+    "brand": "Audi",
+    "status": "verified",
+    "imageUrl": "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800&h=600&fit=crop",
+    "fallbackUrl": "https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?w=800&h=600&fit=crop"
+  },
+  {
+    "brand": "Tesla",
+    "status": "verified",
+    "imageUrl": "https://images.unsplash.com/photo-1561580125-028ee3bd62eb?w=800&h=600&fit=crop",
+    "fallbackUrl": "https://images.unsplash.com/photo-1620891549027-942fdc95d3f5?w=800&h=600&fit=crop"
+  },
+  {
+    "brand": "Porsche",
+    "status": "verified",
+    "imageUrl": "https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?w=800&h=600&fit=crop",
+    "fallbackUrl": "https://images.unsplash.com/photo-1611821064430-0d40291d0f0b?w=800&h=600&fit=crop"
+  },
+  {
+    "brand": "Lamborghini",
+    "status": "verified",
+    "imageUrl": "https://images.unsplash.com/photo-1621135802920-133df287f89c?w=800&h=600&fit=crop",
+    "fallbackUrl": "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?w=800&h=600&fit=crop"
+  },
+  {
+    "brand": "McLaren",
+    "status": "verified",
+    "imageUrl": "https://images.unsplash.com/photo-1623006772851-a67bf7c12c1e?w=800&h=600&fit=crop",
+    "fallbackUrl": "https://images.unsplash.com/photo-1621135329439-068e9f1ec6ca?w=800&h=600&fit=crop"
+  },
+  {
+    "brand": "Jeep",
+    "status": "verified",
+    "imageUrl": "https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=800&h=600&fit=crop",
+    "fallbackUrl": "https://images.unsplash.com/photo-1540574163026-643ea20ade25?w=800&h=600&fit=crop"
+  },
+  {
+    "brand": "Toyota",
+    "status": "verified",
+    "imageUrl": "https://images.unsplash.com/photo-1629897048514-3dd7414fe72a?w=800&h=600&fit=crop",
+    "fallbackUrl": "https://images.unsplash.com/photo-1581235720704-06d3acfcb36f?w=800&h=600&fit=crop"
+  },
+  {
+    "brand": "Honda",
+    "status": "verified",
+    "imageUrl": "https://images.unsplash.com/photo-1609521263047-f8f205293f24?w=800&h=600&fit=crop",
+    "fallbackUrl": "https://images.unsplash.com/photo-1618843479619-f3d0d81e4d10?w=800&h=600&fit=crop"
+  },
+  {
+    "brand": "Nissan",
+    "status": "verified",
+    "imageUrl": "https://images.unsplash.com/photo-1609777792669-d2b41e13c3ac?w=800&h=600&fit=crop",
+    "fallbackUrl": "https://images.unsplash.com/photo-1592853285454-34691b7b74c4?w=800&h=600&fit=crop"
+  },
+  {
+    "brand": "Ford",
+    "status": "verified",
+    "imageUrl": "https://images.unsplash.com/photo-1551830820-330a71b99659?w=800&h=600&fit=crop",
+    "fallbackUrl": "https://images.unsplash.com/photo-1584345604476-8ec5f6904df0?w=800&h=600&fit=crop"
+  },
+  {
+    "brand": "Chevrolet",
+    "status": "verified",
+    "imageUrl": "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&h=600&fit=crop",
+    "fallbackUrl": "https://images.unsplash.com/photo-1612825173281-9a193378527e?w=800&h=600&fit=crop"
+  },
+  {
+    "brand": "Volkswagen",
+    "status": "verified",
+    "imageUrl": "https://images.unsplash.com/photo-1572348805355-73b2086fbb06?w=800&h=600&fit=crop",
+    "fallbackUrl": "https://images.unsplash.com/photo-1607823489283-1deb240f9e27?w=800&h=600&fit=crop"
+  },
+  {
+    "brand": "Range Rover",
+    "status": "verified",
+    "imageUrl": "https://images.unsplash.com/photo-1606611013016-969c19ba12ca?w=800&h=600&fit=crop",
+    "fallbackUrl": "https://images.unsplash.com/photo-1563720360172-67b8f3dce741?w=800&h=600&fit=crop"
+  },
+  {
+    "brand": "Land Rover",
+    "status": "verified",
+    "imageUrl": "https://images.unsplash.com/photo-1568844293986-8d0400bd4745?w=800&h=600&fit=crop",
+    "fallbackUrl": "https://images.unsplash.com/photo-1606220838315-056192d5e927?w=800&h=600&fit=crop"
+  },
+  {
+    "brand": "Mini",
+    "status": "verified",
+    "imageUrl": "https://images.unsplash.com/photo-1563720426003-a3c6ad1d1c66?w=800&h=600&fit=crop",
+    "fallbackUrl": "https://images.unsplash.com/photo-1590362891991-f776e747a588?w=800&h=600&fit=crop"
+  },
+  {
+    "brand": "Peugeot",
+    "status": "verified",
+    "imageUrl": "https://images.unsplash.com/photo-1609788734616-8f9d82b79213?w=800&h=600&fit=crop",
+    "fallbackUrl": "https://images.unsplash.com/photo-1611016186834-09e5d7408e54?w=800&h=600&fit=crop"
+  },
+  {
+    "brand": "Renault",
+    "status": "verified",
+    "imageUrl": "https://images.unsplash.com/photo-1616789916664-dce56d9009da?w=800&h=600&fit=crop",
+    "fallbackUrl": "https://images.unsplash.com/photo-1600712242805-5f78671b24db?w=800&h=600&fit=crop"
+  }
+]

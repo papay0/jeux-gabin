@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test API Update</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .form-group { margin-bottom: 15px; }
+        input, select, button { padding: 10px; margin: 5px; }
+        .result { margin-top: 20px; padding: 10px; background: #f0f0f0; }
+    </style>
+</head>
+<body>
+    <h1>Test Update API</h1>
+    
+    <div class="form-group">
+        <label>Brand:</label>
+        <select id="brand">
+            <option value="Ferrari">Ferrari</option>
+            <option value="BMW">BMW</option>
+            <option value="Mercedes-Benz">Mercedes-Benz</option>
+        </select>
+    </div>
+    
+    <div class="form-group">
+        <label>Image URL:</label>
+        <input type="url" id="imageUrl" placeholder="https://example.com/image.jpg" style="width: 400px;">
+    </div>
+    
+    <div class="form-group">
+        <label>Description:</label>
+        <input type="text" id="description" placeholder="Car description">
+    </div>
+    
+    <button onclick="testUpdate()">Test Update</button>
+    <button onclick="testGet()">Test GET</button>
+    
+    <div class="result" id="result"></div>
+
+    <script>
+        async function testUpdate() {
+            const brand = document.getElementById('brand').value;
+            const imageUrl = document.getElementById('imageUrl').value;
+            const description = document.getElementById('description').value;
+            const resultDiv = document.getElementById('result');
+            
+            console.log('Sending request:', { brand, imageUrl, description });
+            resultDiv.innerHTML = 'Sending request...';
+            
+            try {
+                const response = await fetch('/api/update-images', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ brand, imageUrl, description })
+                });
+                
+                console.log('Response status:', response.status);
+                console.log('Response headers:', response.headers);
+                
+                const data = await response.json();
+                console.log('Response data:', data);
+                
+                resultDiv.innerHTML = `
+                    <h3>Response:</h3>
+                    <p>Status: ${response.status}</p>
+                    <pre>${JSON.stringify(data, null, 2)}</pre>
+                `;
+            } catch (error) {
+                console.error('Error:', error);
+                resultDiv.innerHTML = `<h3>Error:</h3><p>${error.message}</p>`;
+            }
+        }
+        
+        async function testGet() {
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = 'Getting brand images...';
+            
+            try {
+                const response = await fetch('/api/brand-images');
+                const data = await response.json();
+                
+                resultDiv.innerHTML = `
+                    <h3>Brand Images API Response:</h3>
+                    <pre>${JSON.stringify(data, null, 2).substring(0, 500)}...</pre>
+                `;
+            } catch (error) {
+                resultDiv.innerHTML = `<h3>Error:</h3><p>${error.message}</p>`;
+            }
+        }
+    </script>
+</body>
+</html>

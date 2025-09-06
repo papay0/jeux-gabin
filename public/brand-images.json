@@ -1,0 +1,141 @@
+{
+  "Ferrari": {
+    "imageUrl": "https://cdn.shopify.com/s/files/1/2784/4966/files/LaFerrari_1.18_2048x2048.jpg?v=1700216739",
+    "fallbackUrl": "https://images.unsplash.com/photo-1592198084033-aade902d1aae?w=800&h=600&fit=crop",
+    "description": "Ferrari LaFerrari",
+    "verified": true,
+    "lastUpdated": "2025-09-06T15:29:35.904Z"
+  },
+  "BMW": {
+    "imageUrl": "https://t4.ftcdn.net/jpg/04/20/38/41/240_F_420384111_5fzxWlWxvB7bg5BROxfKdBbgBYB2TwGP.jpg",
+    "fallbackUrl": "https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=800&h=600&fit=crop",
+    "description": "BMW sports car",
+    "verified": true,
+    "lastUpdated": "2025-09-06T15:31:55.711Z"
+  },
+  "Mercedes-Benz": {
+    "imageUrl": "https://images.pexels.com/photos/2365572/pexels-photo-2365572.jpeg",
+    "fallbackUrl": "https://images.unsplash.com/photo-1553440569-bcc63803a83d?w=800&h=600&fit=crop",
+    "description": "Mercedes-Benz luxury car",
+    "verified": true,
+    "lastUpdated": "2025-09-06T15:32:10.480Z"
+  },
+  "Audi": {
+    "imageUrl": "https://images.pexels.com/photos/168938/pexels-photo-168938.jpeg",
+    "fallbackUrl": "https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?w=800&h=600&fit=crop",
+    "description": "Audi sports car",
+    "verified": true,
+    "lastUpdated": "2025-09-06T15:34:08.437Z"
+  },
+  "Tesla": {
+    "imageUrl": "https://images.unsplash.com/photo-1561580125-028ee3bd62eb?w=800&h=600&fit=crop",
+    "fallbackUrl": "https://images.unsplash.com/photo-1620891549027-942fdc95d3f5?w=800&h=600&fit=crop",
+    "description": "Tesla Model S electric vehicle",
+    "verified": true
+  },
+  "Porsche": {
+    "imageUrl": "https://media.wired.com/photos/5a00b1a85f0bed3d7bb758b8/3:2/w_2240,c_limit/cayenne-TA.jpg",
+    "fallbackUrl": "https://images.unsplash.com/photo-1611821064430-0d40291d0f0b?w=800&h=600&fit=crop",
+    "description": "Porsche Cayenne SUV",
+    "verified": true,
+    "lastUpdated": "2025-09-06T15:34:47.792Z"
+  },
+  "Lamborghini": {
+    "imageUrl": "https://www.supercars.net/blog/wp-content/uploads/2024/10/Lamborghini-Huracan-STO.png",
+    "fallbackUrl": "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?w=800&h=600&fit=crop",
+    "description": "Lamborghini Huracan STO",
+    "verified": true,
+    "lastUpdated": "2025-09-06T16:07:59.183Z"
+  },
+  "McLaren": {
+    "imageUrl": "https://issimi-vehicles-cdn.b-cdn.net/publicamlvehiclemanagement/VehicleDetails/628/timestamped-1722570747278-2018%20McLaren%20720S_001.jpg?width=3840&quality=75",
+    "fallbackUrl": "https://images.unsplash.com/photo-1621135329439-068e9f1ec6ca?w=800&h=600&fit=crop",
+    "description": "McLaren 720S",
+    "verified": true,
+    "lastUpdated": "2025-09-06T15:41:32.408Z"
+  },
+  "Jeep": {
+    "imageUrl": "https://ewscripps.brightspotcdn.com/dims4/default/710f68a/2147483647/strip/true/crop/3000x1688+0+183/resize/1280x720!/quality/90/?url=http%3A%2F%2Fewscripps-brightspot.s3.amazonaws.com%2Fe2%2F5f%2F889b0d6e4a5cb1cf0fca67ba7cfa%2Fjeep-magneto.jpg",
+    "fallbackUrl": "https://images.unsplash.com/photo-1540574163026-643ea20ade25?w=800&h=600&fit=crop",
+    "description": "Jeep Wrangler Magneto",
+    "verified": true,
+    "lastUpdated": "2025-09-06T15:40:00.961Z"
+  },
+  "Toyota": {
+    "imageUrl": "https://www.topgear.com/sites/default/files/2024/09/Toyota-RAV4-Hybrid-036.jpg?w=1784&h=1004",
+    "fallbackUrl": "https://images.unsplash.com/photo-1581235720704-06d3acfcb36f?w=800&h=600&fit=crop",
+    "description": "Toyota RAV4 Hybrid",
+    "verified": true,
+    "lastUpdated": "2025-09-06T15:43:53.714Z"
+  },
+  "Honda": {
+    "imageUrl": "https://cdn.honda.co.za/main-03/general/amaze/thumbnail/21YM_Amaze_Gallery_Thumb_1_960x806_v2.jpg",
+    "fallbackUrl": "https://images.unsplash.com/photo-1618843479619-f3d0d81e4d10?w=800&h=600&fit=crop",
+    "description": "Honda Amaze",
+    "verified": true,
+    "lastUpdated": "2025-09-06T15:41:45.373Z"
+  },
+  "Nissan": {
+    "imageUrl": "https://blog.vivacar.fr/wp-content/uploads/2018/08/Nouveau-Nissan-Juke-presentation.webp",
+    "fallbackUrl": "https://images.unsplash.com/photo-1592853285454-34691b7b74c4?w=800&h=600&fit=crop",
+    "description": "Nissan Juke",
+    "verified": true,
+    "lastUpdated": "2025-09-06T15:40:56.399Z"
+  },
+  "Ford": {
+    "imageUrl": "https://www.dealerinternet.co.uk/images/webimages/9926/all/slides/img1.jpg",
+    "fallbackUrl": "https://images.unsplash.com/photo-1584345604476-8ec5f6904df0?w=800&h=600&fit=crop",
+    "description": "Ford vehicle",
+    "verified": true,
+    "lastUpdated": "2025-09-06T16:07:55.028Z"
+  },
+  "Chevrolet": {
+    "imageUrl": "https://www.topgear.com/sites/default/files/2024/02/2016-chevrolet-camaro-ss-049.jpg.jpg?w=1654&h=930",
+    "fallbackUrl": "https://images.unsplash.com/photo-1612825173281-9a193378527e?w=800&h=600&fit=crop",
+    "description": "Chevrolet Camaro SS",
+    "verified": true,
+    "lastUpdated": "2025-09-06T15:42:30.162Z"
+  },
+  "Volkswagen": {
+    "imageUrl": "https://www.topgear.com/sites/default/files/2024/07/37558-GolfHatchMatch1.5eTSI150PSAnemoneBlue.jpg?w=1784&h=1004",
+    "fallbackUrl": "https://images.unsplash.com/photo-1607823489283-1deb240f9e27?w=800&h=600&fit=crop",
+    "description": "Volkswagen Golf",
+    "verified": true,
+    "lastUpdated": "2025-09-06T15:46:30.683Z"
+  },
+  "Range Rover": {
+    "imageUrl": "https://media.cdn-jaguarlandrover.com/api/v2/images/102859/w/640.jpg",
+    "fallbackUrl": "https://images.unsplash.com/photo-1563720360172-67b8f3dce741?w=800&h=600&fit=crop",
+    "description": "Range Rover SUV",
+    "verified": true,
+    "lastUpdated": "2025-09-06T15:47:27.567Z"
+  },
+  "Mini": {
+    "imageUrl": "https://www.topgear.com/sites/default/files/2024/09/1-Mini-Cooper-review.jpg?w=1784&h=1004",
+    "fallbackUrl": "https://images.unsplash.com/photo-1590362891991-f776e747a588?w=800&h=600&fit=crop",
+    "description": "Mini Cooper",
+    "verified": true,
+    "lastUpdated": "2025-09-06T15:48:22.217Z"
+  },
+  "Peugeot": {
+    "imageUrl": "https://www.carter-cash.com/blog/wp-content//uploads/2018/10/peugeot-206-plus.jpg.webp",
+    "fallbackUrl": "https://images.unsplash.com/photo-1611016186834-09e5d7408e54?w=800&h=600&fit=crop",
+    "description": "Peugeot 206 Plus",
+    "verified": true,
+    "lastUpdated": "2025-09-06T16:02:02.415Z"
+  },
+  "Renault": {
+    "imageUrl": "https://www.topgear.com/sites/default/files/2023/11/1%20Renault%20Clio%20review.jpg?w=1784&h=1004",
+    "fallbackUrl": "https://images.unsplash.com/photo-1600712242805-5f78671b24db?w=800&h=600&fit=crop",
+    "description": "Renault Clio",
+    "verified": true,
+    "lastUpdated": "2025-09-06T15:48:57.226Z"
+  },
+  "Gabin": {
+    "imageUrl": "https://i.ibb.co/rK0886DR/photo-8630-singular-display-full-Picture.jpg",
+    "fallbackUrl": "https://i.ibb.co/rK0886DR/photo-8630-singular-display-full-Picture.jpg",
+    "description": "Gabin - The Ultimate Car Brand",
+    "verified": true,
+    "lastUpdated": "2025-09-06T16:04:04.279Z"
+  }
+}
