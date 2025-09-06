@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -24,7 +24,6 @@ export default function GameScreen({ questions, onGameEnd }: GameScreenProps) {
     inputMode: 'multiple-choice',
   });
 
-  const [selectedAnswer, setSelectedAnswer] = useState<string>('');
   const [directInput, setDirectInput] = useState<string>('');
   const [showFeedback, setShowFeedback] = useState<boolean>(false);
   const [isCorrect, setIsCorrect] = useState<boolean>(false);
@@ -37,6 +36,27 @@ export default function GameScreen({ questions, onGameEnd }: GameScreenProps) {
   const currentQ = questions[gameState.currentQuestion];
   const progress = ((gameState.currentQuestion + 1) / questions.length) * 100;
 
+  const nextQuestion = useCallback(() => {
+    if (gameState.currentQuestion < questions.length - 1) {
+      setGameState(prev => ({
+        ...prev,
+        currentQuestion: prev.currentQuestion + 1,
+      }));
+      setDirectInput('');
+      setShowFeedback(false);
+      setClickedOption('');
+    } else {
+      setGameState(prev => {
+        const finalState = {
+          ...prev,
+          endTime: new Date(),
+        };
+        onGameEnd(finalState);
+        return finalState;
+      });
+    }
+  }, [gameState.currentQuestion, questions.length, onGameEnd, setGameState]);
+
   // Countdown timer effect - only start when image is loaded
   useEffect(() => {
     if (showFeedback || imageLoading) return; // Don't countdown during feedback or while image loads
@@ -48,9 +68,29 @@ export default function GameScreen({ questions, onGameEnd }: GameScreenProps) {
       return () => clearTimeout(timer);
     } else if (timeLeft === 0 && !showFeedback) {
       // Time's up - auto submit as wrong answer
-      handleTimeUp();
+      const answer = {
+        questionId: currentQ.id,
+        userAnswer: '',
+        correctAnswer: currentQ.correctAnswer,
+        isCorrect: false,
+        points: 0,
+        timeToAnswer: 10 // 10 seconds
+      };
+      
+      setIsCorrect(false);
+      setShowFeedback(true);
+      
+      setGameState(prev => ({
+        ...prev,
+        answers: [...prev.answers, answer],
+        streak: 0 // Break streak on timeout
+      }));
+
+      setTimeout(() => {
+        nextQuestion();
+      }, 2000);
     }
-  }, [timeLeft, showFeedback, imageLoading]);
+  }, [timeLeft, showFeedback, imageLoading, currentQ, setGameState, nextQuestion]);
 
   // Reset timer and loading state when question changes
   useEffect(() => {
@@ -67,52 +107,6 @@ export default function GameScreen({ questions, onGameEnd }: GameScreenProps) {
     if (secondsLeft >= 4) return 5;  // Medium bonus
     if (secondsLeft >= 2) return 3;  // Slow bonus
     return 1; // Last second bonus
-  };
-
-  const handleTimeUp = () => {
-    const answer: Answer = {
-      questionId: currentQ.id,
-      userAnswer: '',
-      correctAnswer: currentQ.correctAnswer,
-      isCorrect: false,
-      points: 0,
-      timeToAnswer: 10 // 10 seconds
-    };
-    
-    setIsCorrect(false);
-    setShowFeedback(true);
-    
-    setGameState(prev => ({
-      ...prev,
-      answers: [...prev.answers, answer],
-      streak: 0 // Break streak on timeout
-    }));
-
-    setTimeout(() => {
-      nextQuestion();
-    }, 2000);
-  };
-
-  const nextQuestion = () => {
-    if (gameState.currentQuestion < questions.length - 1) {
-      setGameState(prev => ({
-        ...prev,
-        currentQuestion: prev.currentQuestion + 1,
-      }));
-      setDirectInput('');
-      setShowFeedback(false);
-      setClickedOption('');
-      setSelectedAnswer('');
-    } else {
-      setGameState(prev => {
-        const finalState = {
-          ...prev,
-          endTime: new Date(),
-        };
-        onGameEnd(finalState);
-        return finalState;
-      });
-    }
   };
 
   // Safety check
@@ -174,8 +168,7 @@ export default function GameScreen({ questions, onGameEnd }: GameScreenProps) {
           ...prev,
           currentQuestion: prev.currentQuestion + 1,
         }));
-        setSelectedAnswer('');
-        setClickedOption('');
+          setClickedOption('');
         setShowFeedback(false);
         setQuestionStartTime(new Date());
       } else {
@@ -261,7 +254,6 @@ export default function GameScreen({ questions, onGameEnd }: GameScreenProps) {
       ...prev,
       inputMode: prev.inputMode === 'multiple-choice' ? 'direct-input' : 'multiple-choice',
     }));
-    setSelectedAnswer('');
     setDirectInput('');
   };
 
@@ -327,7 +319,7 @@ export default function GameScreen({ questions, onGameEnd }: GameScreenProps) {
               <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
                 <div className="text-center">
                   <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-500 mx-auto mb-4"></div>
-                  <div className="text-gray-500 font-medium">Chargement de l'image...</div>
+                  <div className="text-gray-500 font-medium">Chargement de l&apos;image...</div>
                 </div>
               </div>
             )}
@@ -364,7 +356,7 @@ export default function GameScreen({ questions, onGameEnd }: GameScreenProps) {
                     <>
                       <XCircle className="h-12 w-12 sm:h-16 sm:w-16 md:h-20 md:w-20 mx-auto mb-2" />
                       <p className="text-2xl sm:text-3xl md:text-4xl font-bold">Pas tout à fait!</p>
-                      <p className="text-lg sm:text-xl md:text-2xl">C&apos;était: {currentQ.correctAnswer}</p>
+                      <p className="text-lg sm:text-xl md:text-2xl">C&apos;était : {currentQ.correctAnswer}</p>
                     </>
                   )}
                 </div>
