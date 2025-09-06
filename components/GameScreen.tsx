@@ -55,7 +55,7 @@ export default function GameScreen({ questions, onGameEnd }: GameScreenProps) {
         return finalState;
       });
     }
-  }, [gameState.currentQuestion, questions.length, onGameEnd, setGameState]);
+  }, [gameState.currentQuestion, questions.length, onGameEnd, setGameState, setDirectInput, setClickedOption, setShowFeedback]);
 
   // Countdown timer effect - only start when image is loaded
   useEffect(() => {
@@ -163,27 +163,7 @@ export default function GameScreen({ questions, onGameEnd }: GameScreenProps) {
 
     // Move to next question after showing feedback
     setTimeout(() => {
-      if (gameState.currentQuestion < questions.length - 1) {
-        setGameState(prev => ({
-          ...prev,
-          currentQuestion: prev.currentQuestion + 1,
-        }));
-          setClickedOption('');
-        setShowFeedback(false);
-        setQuestionStartTime(new Date());
-      } else {
-        // End game
-        setGameState(prev => {
-          const finalState = {
-            ...prev,
-            score: prev.score + points,
-            answers: [...prev.answers, answer],
-            endTime: new Date(),
-          };
-          onGameEnd(finalState);
-          return finalState;
-        });
-      }
+      nextQuestion();
     }, 1500);
   };
 
@@ -226,26 +206,7 @@ export default function GameScreen({ questions, onGameEnd }: GameScreenProps) {
     setShowFeedback(true);
 
     setTimeout(() => {
-      if (gameState.currentQuestion < questions.length - 1) {
-        setGameState(prev => ({
-          ...prev,
-          currentQuestion: prev.currentQuestion + 1,
-        }));
-        setDirectInput('');
-        setShowFeedback(false);
-        setQuestionStartTime(new Date());
-      } else {
-        setGameState(prev => {
-          const finalState = {
-            ...prev,
-            score: prev.score + points,
-            answers: [...prev.answers, answer],
-            endTime: new Date(),
-          };
-          onGameEnd(finalState);
-          return finalState;
-        });
-      }
+      nextQuestion();
     }, 1500);
   };
 
