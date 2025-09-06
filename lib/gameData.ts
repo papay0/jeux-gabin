@@ -1,17 +1,5 @@
 import { Question } from './types';
 
-// Load brand images from JSON database instead of static TypeScript file
-async function loadBrandImages() {
-  try {
-    const response = await fetch('/brand-images.json');
-    if (!response.ok) throw new Error('Failed to load brand images');
-    return await response.json();
-  } catch (error) {
-    console.error('Error loading brand images:', error);
-    return {};
-  }
-}
-
 // Removed - no longer used in production
 
 export const carBrands = [
